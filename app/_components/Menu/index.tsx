@@ -6,14 +6,14 @@ import{useState} from"react";
 import cx from "classnames";
 import styles from"./index.module.css";
 
-export default function Menu(){
-    const [isOpen,setIsOpen]=useState<boolean>(false);
-    const open=()=> setIsOpen(true);
+export default function Menu() {
+    const [isOpen, setIsOpen] = useState<boolean>(false);
+    const open = () => setIsOpen(true);
     const close=()=> setIsOpen(false);
     return(
         <div>
         <nav className={cx(styles.nav, isOpen && styles.open)}>
-            <ul className={styles.menuItems}>
+            <ul className={styles.items}>
                 <li>
                     <Link href="/news">ニュース</Link>
                 </li>
